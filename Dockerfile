@@ -9,7 +9,7 @@ COPY ./test ./test
 COPY ./tools ./tools
 COPY ./config ./config
 COPY Makefile .
-RUN cd ./src/grpc && make && cd ../..
+RUN cd /data/liquan/dev/zkevm-prover/src/grpc && make && cd ../..
 RUN make clean
 RUN make generate
 RUN make -j

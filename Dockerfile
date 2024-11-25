@@ -9,6 +9,7 @@ COPY ./test ./test
 COPY ./tools ./tools
 COPY ./config ./config
 COPY Makefile .
+RUN cd src/grpc && make && cd ../..
 RUN make generate
 RUN make -j
 
